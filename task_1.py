@@ -18,9 +18,9 @@ def read_and_write(text):
             if len(line) > len(long_line):
                 long_line = line.strip()
 
-        return (f"Количество строк в файле: {count_lines}\n"
-                f"Количество слов в файле: {count_words}\n"
-                f"Самая длинная строка: {long_line}")
+    return (f"Количество строк в файле: {count_lines}\n"
+            f"Количество слов в файле: {count_words}\n"
+            f"Самая длинная строка: {long_line}")
 
 
 if __name__ == '__main__':
