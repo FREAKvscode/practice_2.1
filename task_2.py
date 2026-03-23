@@ -26,3 +26,4 @@ def students_and_evaluations(students, result):
 
 if __name__ == '__main__':
     students_and_evaluations(students='students.txt', result='result.txt')
+
