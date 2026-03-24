@@ -26,4 +26,3 @@ def read_and_write(text):
 if __name__ == '__main__':
     print(read_and_write(text='text.txt'))
 
-
