@@ -16,7 +16,12 @@ def students_and_evaluations(students, result):
             dict_students = {}
             for line in lines:
                 student, evaluations = line.strip().split(':')
-                lst_evaluations = [int(evaluation.strip('@#№$%&!?;:*^<>,.|/ ')) for evaluation in evaluations.split(',')]
+                evaluations = evaluations.replace(',', ' ')
+                lst_evaluations = []
+                for evaluation in evaluations.split():
+                    clean_evaluation = evaluation.strip('@#№$%&!?;:*^<>,.|/ ')
+                    if clean_evaluation.isdigit():
+                        lst_evaluations.append(int(clean_evaluation))
                 dict_students[student] = lst_evaluations
 
             average_value = []
@@ -38,4 +43,5 @@ def students_and_evaluations(students, result):
 
 if __name__ == '__main__':
     students_and_evaluations(students='students.txt', result='result.txt')
+
 
